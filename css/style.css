@@ -98,6 +98,11 @@ i {
 	}
 }
 
+.nav .wrap {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .nav-list {
 	display: none;
 }
@@ -428,12 +433,8 @@ h2 {
 	color: #207742;
 }
 
-.spin {
-	text-align: center;
-}
-
 .form {
-	max-width: 500px;
+	max-width: 330px;
 	margin: 0 auto;
 	padding: 20px;
 	background-color: #ffffff;
@@ -483,8 +484,17 @@ h2 {
 }
 
 .old {
-	opacity: 0.5;
-	text-decoration: line-through;
+	position: relative;
+}
+
+.old::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 1px;
+	width: calc(100% + 10px);
 }
 
 .button {
@@ -493,9 +503,9 @@ h2 {
 	border: 0;
 	padding: 15px 25px;
 	background-color: #207742;
-	font-style: initial!important;
+	font-style: initial !important;
 	border-radius: 5px;
-	color: #ffffff!important;
+	color: #ffffff !important;
 	text-decoration: none;
 	font-family: inherit;
 	font-weight: 500;
@@ -522,6 +532,98 @@ h2 {
 }
 
 .form .form-notes {
-	margin-top: 20px;
+	margin: 20px 0 0;
 	text-align: center;
+}
+
+.spin-wrap {
+	text-align: center;
+}
+
+.spin {
+	width: 280px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.spin-button {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+
+.spin-button::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: '';
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/wheel-cursor.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	z-index: -1;
+}
+
+.spin-button::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: '';
+	width: 45px;
+	height: 45px;
+	border: 1px solid rgba(32, 119, 65, 0.2);
+	border-radius: 50%;
+	box-shadow: 0 0 4px rgba(32, 119, 65, 0.5);
+}
+
+.rotation {
+	animation-name: rotation;
+	animation-duration: 7s;
+	animation-fill-mode: forwards;
+	transition-timing-function: ease-in-out
+}
+
+@keyframes rotation {
+	70% {
+		transform: rotate(1860deg);
+	}
+
+	100% {
+		transform: rotate(1867deg);
+	}
+}
+
+.spin-hide {
+	transition: opacity 0.25s ease-in-out;
+}
+
+.form-block:not(.spin-end) .spin-hide {
+	opacity: 0;
+}
+
+.form-block:not(.spin-end) .new {
+	font-size: 0;
+	margin: 0;
+}
+
+.form-block.spin-end .old {
+	opacity: 0.5;
+}
+
+.form-block.spin-end .old::before {
+	background-color: #1c1c1c;
+}
+
+.form-block:not(.spin-end) .buyer-wrap {
+	font-size: 0;
+	margin: 0;
+	line-height: 0;
 }
