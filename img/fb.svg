@@ -1,3 +1,1 @@
-<svg width="7" height="16" viewBox="0 0 7 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path id="fb_red " fill-rule="evenodd" clip-rule="evenodd" d="M5.27882 3.08021C5.55249 3.08021 6.96041 3.08021 6.96041 3.08021V0.509277L4.64415 0.5C2.0717 0.5 1.48711 2.41921 1.48711 3.6438V5.35775H0V8.00522H1.48711C1.48711 11.4053 1.48711 15.5 1.48711 15.5H4.61504C4.61504 15.5 4.61504 11.3659 4.61504 8.00522H6.72634L7 5.35775H4.61504V3.80151C4.61504 3.21705 5.00516 3.08021 5.27882 3.08021Z" fill="#8D8D8D"/>
-</svg>
+<svg width="7" height="16" viewBox="0 0 7 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.28 3.08h1.68V.51L4.64.5C2.07.5 1.5 2.42 1.5 3.64v1.72H0V8h1.49v7.49h3.13V8h2.1L7 5.37H4.62V3.8c0-.58.39-.72.66-.72Z" fill="#8D8D8D"/></svg>
